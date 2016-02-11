@@ -25,7 +25,7 @@
 <input type="radio" name="hg" value ="10">#A</input>
 <input type="radio" name="hg" value ="11">B</input>
 </form>
-<input type="checkbox" id="cb">show high and low</input>
+<!--<input type="checkbox" id="cb">show high and low</input> !-->
 <form>
 <input type="radio" name="ha"  value="2" >2</input>
 <input type="radio" name="ha"  value="3">3</input>
@@ -87,23 +87,23 @@ function gs(){
 	}else{
 		document.getElementById("pd").innerHTML="Wrong!";
 	}
-		if(document.getElementById("cb").checked==true){
+//if(document.getElementById("cb").checked=="true"){
+	if(l>b){
+	document.getElementById("pc").innerHTML="too high";
+	}
+	if(l<b){
+	document.getElementById("pc").innerHTML="too low";
+	}
+	if(k>a&&l==b){
+	document.getElementById("pc").innerHTML="too high";
+	}
+	if(k<a&&l==b){
+	document.getElementById("pc").innerHTML="too low";
+	}
+
 			
-			if(b<l){
-				document.getElementById("pc").innerHTML="not so high";
-			}
-			if(b>l){
-				document.getElementById("pc").innerHTML="not so low";
-			}
-			if(b==l){
-				if(k>a){
-					document.getElementById("pc").innerHTML="not so high";
-				}
-				if(k<a){
-					document.getElementById("pc").innerHTML="not so low";
-				}
-			}
-		}
+			
+//	}
 	
 }
 

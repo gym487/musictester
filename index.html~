@@ -1,7 +1,7 @@
 <html>
 <head>
 </head>
-<body bgcolor=#EA9021>
+<body bgcolor=#EA903A>
 <p id="pd"></p>
 <br>
 <p id="pc"></p>
@@ -87,23 +87,23 @@ function gs(){
 	}else{
 		document.getElementById("pd").innerHTML="Wrong!";
 	}
-		if(document.getElementById("cb").checked==true){
+if(document.getElementById("cb").checked=="true"){
+	if(l>b){
+	document.getElementById("pc").innerHTML="too high";
+	}
+	if(l<b){
+	document.getElementById("pc").innerHTML="too low";
+	}
+	if(k>a&&l==b){
+	document.getElementById("pc").innerHTML="too high";
+	}
+	if(k<a&&l==b){
+	document.getElementById("pc").innerHTML="too low";
+	}
+
 			
-			if(b<l){
-				document.getElementById("pc").innerHTML="not so high";
-			}
-			if(b>l){
-				document.getElementById("pc").innerHTML="not so low";
-			}
-			if(b==l){
-				if(k>a){
-					document.getElementById("pc").innerHTML="not so high";
-				}
-				if(k<a){
-					document.getElementById("pc").innerHTML="not so low";
-				}
-			}
-		}
+			
+	}
 	
 }
 
