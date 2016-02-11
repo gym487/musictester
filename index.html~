@@ -41,6 +41,7 @@
 <input type="radio" onchange="rn()" name="ha" value="4" id="si">4</input>
 <input type="radio" onchange="rn()" name="ha"  value="5">5</input>
 <input type="radio" onchange="rn()" name="ha"  value="6">6</input>
+<input type="radio" onchange="rn()" name="ha"  value="7">7</input>
 </div><br>
 <p id="pp">C4</p>
 
@@ -54,8 +55,8 @@ var yjj=new Array("C","#C","D","#D","E","F","#F","G","#G","A","#A","B");
 var num=new Array("0","1","2","3","4","5","6","7","8","9");
 var a=0;
 var b=4;
-
-
+var k=0;
+var l=4;
 function ns()
 {
 a=Math.round(Math.random()*11)
@@ -65,6 +66,7 @@ document.getElementById("cb").setAttribute("src","./sound/"+yj[a]+num[b]+".mp3")
 document.getElementById("cc").setAttribute("src","./sound/"+yj[a]+num[b]+".wav");
 document.getElementById("ca").load();
 document.getElementById("ca").play();
+document.getElementById("pd").innerHTML="";
 }
 function rp(){
 document.getElementById("ca").pause();
@@ -76,22 +78,8 @@ document.getElementById("ca").play();
 function gs(){
 	document.getElementById("pc").innerHTML="."
 	var i=0;
-	var j=0;
-	var k=100;
-	var l=100;
-	for(i=0;i<12;i++){
-		if(document.getElementsByName("hg")[i].checked==true){
-			k=document.getElementsByName("hg")[i].getAttribute("value");
-		}
-	}
-	if(k==100){
-		document.getElementById("pd").innerHTML="err";
-	}
-	for(i=0;i<5;i++){
-		if(document.getElementsByName("ha")[i].checked==true){
-			l=document.getElementsByName("ha")[i].getAttribute("value");
-		}
-	}
+	 k=100;
+	 l=100;
 	if(l==100){
 		document.getElementById("pd").innerHTML="err";
 	}
@@ -133,8 +121,8 @@ ns();
 function rn(){
 	var i=0;
 	//var j=0;
-	var k=100;
-	var l=100;
+	 k=100;
+	 l=100;
 	for(i=0;i<12;i++){
 		if(document.getElementsByName("hg")[i].checked==true){
 			k=document.getElementsByName("hg")[i].getAttribute("value");
@@ -143,30 +131,32 @@ function rn(){
 	if(k==100){
 		document.getElementById("pd").innerHTML="err";
 	}
-	for(i=0;i<5;i++){
+	for(i=0;i<6;i++){
 		if(document.getElementsByName("ha")[i].checked==true){
 			l=document.getElementsByName("ha")[i].getAttribute("value");
 		}
 	}
 	if(k!=100&&l!=100){
 		document.getElementById("pp").innerHTML=yjj[k]+num[l];
+		document.getElementById("bll").innerHTML="listen "+yjj[k]+num[l];
 	}
 }
 function lc(){
 //=0;
 //b=4;
 document.getElementById("ca").pause();
-document.getElementById("cb").setAttribute("src","./sound/C4.mp3");
-document.getElementById("cc").setAttribute("src","./sound/C4.wav");
+document.getElementById("cb").setAttribute("src","./sound/"+yj[k]+num[l]+".mp3");
+document.getElementById("cc").setAttribute("src","./sound/"+yj[k]+num[l]+".wav");
 document.getElementById("ca").load();
 document.getElementById("ca").play();
 }
 </script>
-<button type="button" class="btn btn-default" onclick="ns()" >new sound </button>
-<button type="button" class="btn btn-default" onclick="rp()">replay</button>
-<button type="button" class="btn btn-default" onclick="gs()">guess</button>
-<button type="button" class="btn btn-default" onclick="sa()">show answer</button>
-<button type="button" class="btn btn-default" onclick="lc()">listen C4</button>
+<button type="button" class="btn btn-default" onclick="ns()">New Sound</button>
+<button type="button" class="btn btn-default" onclick="rp()">Replay</button>
+<button type="button" class="btn btn-default" onclick="gs()">Guess</button>
+<button type="button" class="btn btn-default" onclick="sa()">Show Answer</button>
+<button type="button" class="btn btn-default" onclick="lc()" id="bll">Listen C4</button>
+
 <br>
 <br>
 <br>
