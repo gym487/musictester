@@ -1,7 +1,7 @@
 <html>
 <head>
 </head>
-<body>
+<body bgcolor=#EA90020>
 <p id="pd"></p>
 <br>
 <p id="pc"></p>
@@ -90,17 +90,17 @@ function gs(){
 		if(document.getElementById("cb").checked==true){
 			
 			if(b<l){
-				document.getElementById("pc").innerHTML="not so high";;
+				document.getElementById("pc").innerHTML="not so high";
 			}
 			if(b>l){
-				document.getElementById("pc").innerHTML="not so low";;
+				document.getElementById("pc").innerHTML="not so low";
 			}
 			if(b==l){
 				if(k>a){
-					document.getElementById("pc").innerHTML="not so high";;
+					document.getElementById("pc").innerHTML="not so high";
 				}
 				if(k<a){
-					document.getElementById("pc").innerHTML="not so low";;
+					document.getElementById("pc").innerHTML="not so low";
 				}
 			}
 		}
