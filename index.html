@@ -1,8 +1,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="./js/jquery.js"></script>
+<link href="./bootstrap.min.css" rel="stylesheet">  
+<script src="./bootstrap.min.js"></script>
+<script src="./icheck.js"></script>
+<link href="./css/custom.css" rel="stylesheet">
+<link href="./squre/blue.css" rel="stylesheet">
+<script src="./js/custom.min.js"></script>
 </head>
-<body bgcolor=#EA903A>
+<body>
 <p id="pd"></p>
 <br>
 <p id="pc"></p>
@@ -10,9 +17,8 @@
 <audio id="ca" autoplay="true" volume=0.1 >
 <source id="cb" src="./sound/C4.mp3" type="audio/mp3"> 
 <source id="cc" src="./sound/C4.wav" type="audio/wav">
-
-    </audio>
-<form>
+</audio>
+<div>
 <input type="radio" onchange="rn()" name="hg" value ="0" id="co" >C</input>
 <input type="radio" onchange="rn()" name="hg" value ="1">#C</input>
 <input type="radio" onchange="rn()" name="hg" value ="2">D</input>
@@ -25,18 +31,22 @@
 <input type="radio" onchange="rn()" name="hg" value ="9">A</input>
 <input type="radio" onchange="rn()" name="hg" value ="10">#A</input>
 <input type="radio" onchange="rn()" name="hg" value ="11">B</input>
-</form>
+</div>
+
 <!--<input type="checkbox" id="cb">show high and low</input> !-->
-<form>
+<br>
+<div>
 <input type="radio" onchange="rn()" name="ha"  value="2" >2</input>
 <input type="radio" onchange="rn()" name="ha"  value="3">3</input>
 <input type="radio" onchange="rn()" name="ha" value="4" id="si">4</input>
 <input type="radio" onchange="rn()" name="ha"  value="5">5</input>
 <input type="radio" onchange="rn()" name="ha"  value="6">6</input>
-</form><br>
+</div><br>
 <p id="pp">C4</p>
 
+<script>
 
+</script>
 
 <script type="text/javascript">
 var yj=new Array("C","uC","D","uD","E","F","uF","G","uG","A","uA","B");
@@ -55,6 +65,7 @@ document.getElementById("cb").setAttribute("src","./sound/"+yj[a]+num[b]+".mp3")
 document.getElementById("cc").setAttribute("src","./sound/"+yj[a]+num[b]+".wav");
 document.getElementById("ca").load();
 document.getElementById("ca").play();
+document.getElementById("pd").innerHTML="";
 }
 function rp(){
 document.getElementById("ca").pause();
@@ -152,11 +163,11 @@ document.getElementById("ca").load();
 document.getElementById("ca").play();
 }
 </script>
-<button onclick="ns()" >new sound </button>
-<button onclick="rp()">replay</button>
-<button onclick="gs()">guess</button>
-<button onclick="sa()">show answer</button>
-<button onclick="lc()">listen C4</button>
+<button type="button" class="btn btn-default" onclick="ns()" >new sound </button>
+<button type="button" class="btn btn-default" onclick="rp()">replay</button>
+<button type="button" class="btn btn-default" onclick="gs()">guess</button>
+<button type="button" class="btn btn-default" onclick="sa()">show answer</button>
+<button type="button" class="btn btn-default" onclick="lc()">listen C4</button>
 <br>
 <br>
 <br>
