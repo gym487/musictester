@@ -1,0 +1,136 @@
+<html>
+<head>
+</head>
+<body>
+<p id="pd"></p>
+<br>
+<p id="pc"></p>
+<br>
+<audio id="ca" autoplay="true" volume=0.1 >
+<source id="cb" src="./sound/C4.mp3" type="audio/mp3"> 
+<source id="cc" src="./sound/C4.wav" type="audio/wav">
+
+    </audio>
+<form>
+<input type="radio" name="hg" value ="0" >C</input>
+<input type="radio" name="hg" value ="1">#C</input>
+<input type="radio" name="hg" value ="2">D</input>
+<input type="radio" name="hg" value ="3">#D</input>
+<input type="radio" name="hg" value ="4">E</input>
+<input type="radio" name="hg" value ="5">F</input>
+<input type="radio" name="hg" value ="6">#F</input>
+<input type="radio" name="hg" value ="7">G</input>
+<input type="radio" name="hg" value ="8">#G</input>
+<input type="radio" name="hg" value ="9">A</input>
+<input type="radio" name="hg" value ="10">#A</input>
+<input type="radio" name="hg" value ="11">B</input>
+</form>
+<input type="checkbox" id="cb">show high and low</input>
+<form>
+<input type="radio" name="ha"  value="2" >2</input>
+<input type="radio" name="ha"  value="3">3</input>
+<input type="radio" name="ha" value="4" >4</input>
+<input type="radio" name="ha"  value="5">5</input>
+<input type="radio" name="ha"  value="6">6</input>
+</form><br/>
+
+
+<script type="text/javascript">
+var yj=new Array("C","uC","D","uD","E","F","uF","G","uG","A","uA","B");
+var yjj=new Array("C","#C","D","#D","E","F","#F","G","#G","A","#A","B");
+var num=new Array("0","1","2","3","4","5","6","7","8","9");
+var a=0;
+var b=4;
+
+
+function ns()
+{
+a=Math.round(Math.random()*11)
+b=2+Math.round(Math.random()*5)
+document.getElementById("ca").pause();
+document.getElementById("cb").setAttribute("src","./sound/"+yj[a]+num[b]+".mp3");
+document.getElementById("cc").setAttribute("src","./sound/"+yj[a]+num[b]+".wav");
+document.getElementById("ca").load();
+document.getElementById("ca").play();
+}
+function rp(){
+document.getElementById("ca").pause();
+document.getElementById("cb").setAttribute("src","./sound/"+yj[a]+num[b]+".mp3");
+document.getElementById("cc").setAttribute("src","./sound/"+yj[a]+num[b]+".wav");
+document.getElementById("ca").load();
+document.getElementById("ca").play();
+}
+function gs(){
+	document.getElementById("pc").innerHTML="."
+	var i=0;
+	var j=0;
+	var k=100;
+	var l=100;
+	for(i=0;i<12;i++){
+		if(document.getElementsByName("hg")[i].checked==true){
+			k=document.getElementsByName("hg")[i].getAttribute("value");
+		}
+	}
+	if(k==100){
+		document.getElementById("pd").innerHTML="err";
+	}
+	for(i=0;i<5;i++){
+		if(document.getElementsByName("ha")[i].checked==true){
+			l=document.getElementsByName("ha")[i].getAttribute("value");
+		}
+	}
+	if(l==100){
+		document.getElementById("pd").innerHTML="err";
+	}
+	if(k==a&&l==b){
+		document.getElementById("pd").innerHTML="Correct!";
+	}else{
+		document.getElementById("pd").innerHTML="Wrong!";
+	}
+		if(document.getElementById("cb").checked==true){
+			
+			if(b<l){
+				document.getElementById("pc").innerHTML="not so high";
+			}
+			if(b>l){
+				document.getElementById("pc").innerHTML="not so low";
+			}
+			if(b==l){
+				if(k>a){
+					document.getElementById("pc").innerHTML="not so high";
+				}
+				if(k<a){
+					document.getElementById("pc").innerHTML="not so low";
+				}
+			}
+		}
+	
+}
+
+function sa(){
+document.getElementById("pd").innerHTML=yjj[a]+num[b];
+}
+window.onload=function(){
+document.getElementById("cb").checked=false;
+ns();
+//document.getElementById("pc").innerHTML="not so low";;
+} 
+
+function lc(){
+//=0;
+//b=4;
+document.getElementById("ca").pause();
+document.getElementById("cb").setAttribute("src","./sound/C4.mp3");
+document.getElementById("cc").setAttribute("src","./sound/C4.wav");
+document.getElementById("ca").load();
+document.getElementById("ca").play();
+}
+</script>
+<button onclick="ns()" >new sound </button>
+<button onclick="rp()">replay</button>
+<button onclick="gs()">guess</button>
+<button onclick="sa()">show answer</button>
+<button onclick="lc()">listen C4</button>
+</body>
+</html>
+
