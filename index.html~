@@ -13,7 +13,7 @@
 
     </audio>
 <form>
-<input type="radio" onchange="rn()" name="hg" value ="0" id="cc" >C</input>
+<input type="radio" onchange="rn()" name="hg" value ="0" id="co" >C</input>
 <input type="radio" onchange="rn()" name="hg" value ="1">#C</input>
 <input type="radio" onchange="rn()" name="hg" value ="2">D</input>
 <input type="radio" onchange="rn()" name="hg" value ="3">#D</input>
@@ -115,7 +115,7 @@ document.getElementById("pd").innerHTML=yjj[a]+num[b];
 }
 window.onload=function(){
 //document.getElementById("cb").checked=false;
-document.getElementById("cc").checked=true;
+document.getElementById("co").checked=true;
 document.getElementById("si").checked=true;
 ns();
 //document.getElementById("pc").innerHTML="not so low";;
