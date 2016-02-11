@@ -78,8 +78,7 @@ document.getElementById("ca").play();
 function gs(){
 	document.getElementById("pc").innerHTML="."
 	var i=0;
-	 k=100;
-	 l=100;
+	
 	if(l==100){
 		document.getElementById("pd").innerHTML="err";
 	}
