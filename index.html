@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 </head>
 <body bgcolor=#EA903A>
 <p id="pd"></p>
@@ -12,27 +13,29 @@
 
     </audio>
 <form>
-<input type="radio" name="hg" value ="0" >C</input>
-<input type="radio" name="hg" value ="1">#C</input>
-<input type="radio" name="hg" value ="2">D</input>
-<input type="radio" name="hg" value ="3">#D</input>
-<input type="radio" name="hg" value ="4">E</input>
-<input type="radio" name="hg" value ="5">F</input>
-<input type="radio" name="hg" value ="6">#F</input>
-<input type="radio" name="hg" value ="7">G</input>
-<input type="radio" name="hg" value ="8">#G</input>
-<input type="radio" name="hg" value ="9">A</input>
-<input type="radio" name="hg" value ="10">#A</input>
-<input type="radio" name="hg" value ="11">B</input>
+<input type="radio" onchange="rn()" name="hg" value ="0" id="co" >C</input>
+<input type="radio" onchange="rn()" name="hg" value ="1">#C</input>
+<input type="radio" onchange="rn()" name="hg" value ="2">D</input>
+<input type="radio" onchange="rn()" name="hg" value ="3">#D</input>
+<input type="radio" onchange="rn()" name="hg" value ="4">E</input>
+<input type="radio" onchange="rn()" name="hg" value ="5">F</input>
+<input type="radio" onchange="rn()" name="hg" value ="6">#F</input>
+<input type="radio" onchange="rn()" name="hg" value ="7">G</input>
+<input type="radio" onchange="rn()" name="hg" value ="8">#G</input>
+<input type="radio" onchange="rn()" name="hg" value ="9">A</input>
+<input type="radio" onchange="rn()" name="hg" value ="10">#A</input>
+<input type="radio" onchange="rn()" name="hg" value ="11">B</input>
 </form>
 <!--<input type="checkbox" id="cb">show high and low</input> !-->
 <form>
-<input type="radio" name="ha"  value="2" >2</input>
-<input type="radio" name="ha"  value="3">3</input>
-<input type="radio" name="ha" value="4" >4</input>
-<input type="radio" name="ha"  value="5">5</input>
-<input type="radio" name="ha"  value="6">6</input>
-</form><br/>
+<input type="radio" onchange="rn()" name="ha"  value="2" >2</input>
+<input type="radio" onchange="rn()" name="ha"  value="3">3</input>
+<input type="radio" onchange="rn()" name="ha" value="4" id="si">4</input>
+<input type="radio" onchange="rn()" name="ha"  value="5">5</input>
+<input type="radio" onchange="rn()" name="ha"  value="6">6</input>
+</form><br>
+<p id="pp">C4</p>
+
 
 
 <script type="text/javascript">
@@ -111,11 +114,34 @@ function sa(){
 document.getElementById("pd").innerHTML=yjj[a]+num[b];
 }
 window.onload=function(){
-document.getElementById("cb").checked=false;
+//document.getElementById("cb").checked=false;
+document.getElementById("co").checked=true;
+document.getElementById("si").checked=true;
 ns();
 //document.getElementById("pc").innerHTML="not so low";;
 } 
-
+function rn(){
+	var i=0;
+	//var j=0;
+	var k=100;
+	var l=100;
+	for(i=0;i<12;i++){
+		if(document.getElementsByName("hg")[i].checked==true){
+			k=document.getElementsByName("hg")[i].getAttribute("value");
+		}
+	}
+	if(k==100){
+		document.getElementById("pd").innerHTML="err";
+	}
+	for(i=0;i<5;i++){
+		if(document.getElementsByName("ha")[i].checked==true){
+			l=document.getElementsByName("ha")[i].getAttribute("value");
+		}
+	}
+	if(k!=100&&l!=100){
+		document.getElementById("pp").innerHTML=yjj[k]+num[l];
+	}
+}
 function lc(){
 //=0;
 //b=4;
