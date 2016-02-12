@@ -12,6 +12,7 @@
 <title>Sound Tester</title> 
 </head>
 <body>
+<center>
 <div class="container">
 <div class="" id="divvv">
 <p id="pd"></p>
@@ -209,5 +210,6 @@ document.getElementById("ca").play();
 <br>
 <p>Powered by QingBiJuShi   gym487@163.com</p>
 </div>
+</center>
 </body>
 </html>
