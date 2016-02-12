@@ -54,7 +54,7 @@
 <br>
 <p id="pp">C4</p>
 
-<p id="gtt">Guessed Time:</p>
+<p id="gtt">Guessed Time: 0</p>
 
 <script type="text/javascript">
 var yj=new Array("C","uC","D","uD","E","F","uF","G","uG","A","uA","B");
@@ -82,6 +82,7 @@ document.getElementById("pc").innerHTML="  ";
 cheat=0;
 gt=0;
 gd=0;
+document.getElementById("gtt").innetHTML="Gussed Time: "+gt;
 }
 function rp(){
 document.getElementById("ca").pause();
@@ -113,7 +114,9 @@ function gs(){
 		document.getElementById("divvv").setAttribute("class","alert alert-block");
 		if(gd==0){
 		gt=gt+1;
+		document.getElementById("gtt").innerHTML="Gussed Time: "+gt;
 		}
+	
 	}
 //if(document.getElementById("cb").checked=="true"){
 	if(l>b){

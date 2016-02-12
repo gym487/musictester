@@ -82,7 +82,7 @@ document.getElementById("pc").innerHTML="  ";
 cheat=0;
 gt=0;
 gd=0;
-document.getElementById("gtt").innetHTML="Gussed Time: "+gt;
+document.getElementById("gtt").innerHTML="Gussed Time: "+gt;
 }
 function rp(){
 document.getElementById("ca").pause();
@@ -114,8 +114,9 @@ function gs(){
 		document.getElementById("divvv").setAttribute("class","alert alert-block");
 		if(gd==0){
 		gt=gt+1;
+		document.getElementById("gtt").innerHTML="Gussed Time: "+gt;
 		}
-	document.getElementById("gtt").innetHTML="Gussed Time: "+gt;
+	
 	}
 //if(document.getElementById("cb").checked=="true"){
 	if(l>b){
