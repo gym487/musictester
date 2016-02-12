@@ -82,7 +82,7 @@ document.getElementById("pc").innerHTML="  ";
 cheat=0;
 gt=0;
 gd=0;
-document.getElementById("gtt").innetHTML="Gussed Time: "+gt;
+document.getElementById("gtt").innerHTML="Gussed Time: "+gt;
 }
 function rp(){
 document.getElementById("ca").pause();
