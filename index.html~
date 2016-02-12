@@ -12,7 +12,7 @@
 <title>Sound Tester</title> 
 </head>
 <body>
-<div class="well">
+<div class="container">
 <div class="" id="divvv">
 <p id="pd"></p>
 <br>
