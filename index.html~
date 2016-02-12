@@ -3,8 +3,8 @@
 <meta charset="UTF-8">
 <meta content="width=device-width" name="viewport">
 <script src="./js/jquery.js"></script>
-<link href="./bootstrap.min.css" rel="stylesheet">  
-<script src="./bootstrap.min.js"></script>
+<link href="./css/bootstrap.min.css" rel="stylesheet">  
+<script src="./js/bootstrap.min.js"></script>
 <script src="./icheck.js"></script>
 <link href="./css/custom.css" rel="stylesheet">
 <link href="./skins/square/blue.css" rel="stylesheet">
@@ -12,6 +12,7 @@
 <title>Sound Tester</title> 
 </head>
 <body>
+<div class="well">
 <div class="" id="divvv">
 <p id="pd"></p>
 <br>
@@ -207,5 +208,6 @@ document.getElementById("ca").play();
 <br>
 <br>
 <p>Powered by QingBiJuShi   gym487@163.com</p>
+</div>
 </body>
 </html>
